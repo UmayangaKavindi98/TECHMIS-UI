@@ -1,0 +1,450 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FOT | TECMIS</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <!-- Favicon-->
+    <!-- project css file  -->
+    <link rel="stylesheet" href="assets/css/my-task.style.min.css">
+    <!-- plugin css file  -->
+    <link rel="stylesheet" href="assets/plugin/datatables/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="assets/plugin/datatables/dataTables.bootstrap5.min.css">
+
+
+    <style>
+        .seen{
+            background-color:#F2F4F4;
+        }
+        .notice.anim {
+            animation: animate 1.5s ease-in;
+            animation-fill-mode: forwards;
+            /* transform: scale(1); */
+        }
+        
+        @keyframes animate {
+            0% {
+                transform: scale(0.5);
+            }
+            20% {
+                transform: scale(0.3);
+            }
+            60% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mytask-layout" class="theme-indigo">
+
+        <!-- sidebar -->
+        <div class="sidebar px-4 py-4 py-md-5 me-0">
+            <div class="d-flex flex-column h-100">
+                <a href="index.html" class="mb-0 brand-icon">
+                    <span class="logo-icon">
+                    <img src="assets\images\logo.png" alt="logo" width="70px">
+                </span>
+                    <span class="logo-text">FOT | TECMIS</span>
+                </a>
+                <!-- Menu: main ul -->
+
+                <ul class="menu-list flex-grow-1 mt-3">
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#dashboard-Components" href="#">
+                            <i class="icofont-home fs-5"></i> <span>Home</span> <span class="arrow icofont-dotted-down ms-auto text-end fs-5"></span></a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="dashboard-Components">
+                            <li>
+                                <a class="ms-link" href="index.html"> <span>Home</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#project-Components" href="#">
+                            <i class="icofont-tasks fs-5"></i></i><span>Registration</span> <span class="arrow icofont-dotted-down ms-auto text-end fs-5"></span></a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="project-Components">
+                            <li><a class="ms-link" href="course-reg.html"><span>Course Registration</span></a></li>
+                            <li><a class="ms-link" href="exam-reg.html"><span>Exam Registration</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#tikit-Components" href="#"><i
+                            class="icofont-files-stack"></i> <span>Courses</span> <span class="arrow icofont-dotted-down ms-auto text-end fs-5"></span></a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="tikit-Components">
+                            <li>
+                                <a class="ms-link" href="pass-papers.html"> <span>Past papers</span></a>
+                            </li>
+                            <li>
+                                <a class="ms-link" href="view-attendance.html"> <span>View Attendance</span></a>
+                            </li>
+                            <li>
+                                <a class="ms-link" href="submit-medical.html"> <span>Submit Medicals</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#client-Components" href="#"><i
+                            class="icofont-user-male"></i> <span>Examination</span> <span class="arrow icofont-dotted-down ms-auto text-end fs-5"></span></a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="client-Components">
+                            <li>
+                                <a class="ms-link" href="results.html"> <span>Results</span></a>
+                            </li>
+                            <li>
+                                <a class="ms-link" href="gpa.html"> <span>SGPA | CGPA</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#dashboard-Components" href="#">
+                            <i class="icofont-bread fs-5"></i> <span>Meal Order</span> <span class="arrow icofont-dotted-down ms-auto text-end fs-5"></span></a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="dashboard-Components">
+                            <li>
+                                <a class="ms-link" href="place-meal.html"> <span>Place Meal Order</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Menu: menu collepce btn -->
+                <button type="button" class="btn btn-link sidebar-mini-btn text-light">
+                <span class="ms-2"><i class="icofont-bubble-right"></i></span>
+            </button>
+            </div>
+        </div>
+
+        <!-- main body area -->
+        <div class="main px-lg-4 px-md-4">
+
+            <!-- Body: Header -->
+            <div class="header">
+                <nav class="navbar py-4">
+                    <div class="container-xxl">
+
+                        <!-- header rightbar icon -->
+                        <div class="h-right d-flex align-items-center mr-5 mr-lg-0 order-1">
+
+                            <div class="dropdown user-profile ml-2 ml-sm-3 d-flex align-items-center zindex-popover">
+                                <div class="u-info me-2">
+                                    <p class="mb-0 text-end line-height-sm "><span class="font-weight-bold">N.M.L.Madhusanka</span></p>
+                                    <small>Student</small>
+                                </div>
+                                <a class="nav-link dropdown-toggle pulse p-0" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static">
+                                    <img class="avatar lg rounded-circle img-thumbnail" src="assets/images/profile_av.png" alt="profile">
+                                </a>
+                                <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-end p-0 m-0">
+                                    <div class="card border-0 w280">
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex py-1">
+                                                <img class="avatar rounded-circle" src="assets/images/profile_av.png" alt="profile">
+                                                <div class="flex-fill ms-3">
+                                                    <p class="mb-0"><span class="font-weight-bold">N.M.L.Madhusanka</span></p>
+                                                    <small class="">Lakshan_2018389@fot.ruh.ac.lk</small>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <hr class="dropdown-divider border-dark">
+                                            </div>
+                                        </div>
+                                        <div class="list-group m-2 ">
+                                            <a href="members.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-ui-user-group fs-6 me-3"></i>Change Password</a>
+                                            <div>
+                                                <hr class="dropdown-divider border-dark">
+                                            </div>
+                                            <a href="login.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-logout fs-6 me-3"></i>Signout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- menu toggler -->
+                        <button class="navbar-toggler p-0 border-0 menu-toggle order-3" type="button" data-bs-toggle="collapse" data-bs-target="#mainHeader">
+                        <span class="fa fa-bars"></span>
+                    </button>
+
+                        <!-- main menu Search-->
+                        <div class="order-0 col-lg-4 col-md-4 col-sm-12 col-12 mb-3 mb-md-0 ">
+
+                            <h2 style="font-family:sans-serif; font-size: 16pt;" class="font-weight-bold"><img src="assets\images\fac-logo.png" alt="fac-logo" width="50px"> Faculty of Technology</h2>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Body: Body -->
+            <div class="body d-flex py-lg-3 py-md-2">
+                <div class="container-xxl">
+
+                    <div class="row align-items-center">
+                        <div class="border-0 mb-4">
+                            <div class="card-header no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
+                                <h3 class="fw-bold mb-0 py-3 pb-2">Notices</h3>
+                                <div class="col-auto py-2 w-sm-100">
+                                    <ul class="nav nav-tabs tab-body-header rounded invoice-set" role="tablist">
+                                        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#Invoice-list" role="tab">ALL</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Invoice-Simple" role="tab">ICT</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Invoice-Email" role="tab">ET</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Invoice-BST" role="tab">BST</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Invoice-other" role="tab">Other</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row end  -->
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="Invoice-list">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8 col-md-12">
+                                            <div class="card mb-3 notice">
+                                                <div class="card-body d-sm-flex justify-content-between">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar2.jpg" alt="">
+                                                        <div class="flex-fill ms-3 text-truncate">
+                                                            <h6 class="d-flex justify-content-between mb-0"><span>Assistant Registerer</span></h6>
+                                                            <span class="badge bg-danger">NEW</span>
+                                                        </div>
+                                                    </a>
+                                                    <div class="text-end d-none d-md-block">
+                                                        <p class="mb-1">ICT LEVEL 3 SEMESTER 2 EXAMINATION RESULTS - 2019/2020</p>
+                                                        <span class="badge bg-info">ICT</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer justify-content-between d-flex align-items-center">
+                                                    <div class="d-none d-md-block">
+                                                        <strong>On:</strong>
+                                                        <span>2022-05-19/11:12</span>
+                                                    </div>
+                                                    <div class="card-hover-show">
+                                                        <a class="btn btn-sm btn-warning border lift" href="#">View</a>
+                                                        <a class="btn btn-sm btn-white border lift" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-3 notice">
+                                                <div class="card-body d-sm-flex justify-content-between">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar2.jpg" alt="">
+                                                        <div class="flex-fill ms-3 text-truncate">
+                                                            <h6 class="d-flex justify-content-between mb-0"><span>Assistant Registerer</span></h6>
+                                                            <span class="badge bg-danger">NEW</span>
+                                                        </div>
+                                                    </a>
+                                                    <div class="text-end d-none d-md-block">
+                                                        <p class="mb-1">ET LEVEL 3 SEMESTER 2 EXAMINATION RESULTS - 2019/2020</p>
+                                                        <span class="badge bg-primary">ET</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer justify-content-between d-flex align-items-center">
+                                                    <div class="d-none d-md-block">
+                                                        <strong>On:</strong>
+                                                        <span>2022-05-19/11:12</span>
+                                                    </div>
+                                                    <div class="card-hover-show">
+                                                        <a class="btn btn-sm btn-warning border lift" href="#">View</a>
+                                                        <a class="btn btn-sm btn-white border lift" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-3 notice">
+                                                <div class="card-body d-sm-flex justify-content-between seen">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar2.jpg" alt="">
+                                                        <div class="flex-fill ms-3 text-truncate">
+                                                            <h6 class="d-flex justify-content-between mb-0"><span>Assistant Registerer</span></h6>
+                                                        </div>
+                                                    </a>
+                                                    <div class="text-end d-none d-md-block">
+                                                        <p class="mb-1">BST LEVEL 3 SEMESTER 2 EXAMINATION RESULTS - 2019/2020</p>
+                                                        <span class="badge bg-success">BST</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer justify-content-between d-flex align-items-center">
+                                                    <div class="d-none d-md-block">
+                                                        <strong>On:</strong>
+                                                        <span>2022-05-19/11:12</span>
+                                                    </div>
+                                                    <div class="card-hover-show">
+                                                        <a class="btn btn-sm btn-warning border lift" href="#">View Again</a>
+                                                        <a class="btn btn-sm btn-white border lift" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <nav aria-label="Page navigation">
+                                                <ul class="pagination mt-4">
+                                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <!-- Row end  -->
+                                </div>
+                                <!-- tab end  -->
+                                <div class="tab-pane fade" id="Invoice-Simple">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8 col-md-12">
+                                            <div class="card mb-3 notice">
+                                                <div class="card-body d-sm-flex justify-content-between">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar2.jpg" alt="">
+                                                        <div class="flex-fill ms-3 text-truncate">
+                                                            <h6 class="d-flex justify-content-between mb-0"><span>Assistant Registerer</span></h6>
+                                                        </div>
+                                                    </a>
+                                                    <div class="text-end d-none d-md-block">
+                                                        <p class="mb-1">ICT LEVEL 3 SEMESTER 2 EXAMINATION RESULTS - 2019/2020</p>
+                                                        <span class="badge bg-info">ICT</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer justify-content-between d-flex align-items-center">
+                                                    <div class="d-none d-md-block">
+                                                        <strong>On:</strong>
+                                                        <span>2022-05-19/11:12</span>
+                                                    </div>
+                                                    <div class="card-hover-show">
+                                                        <a class="btn btn-sm btn-warning border lift" href="#">Download</a>
+                                                        <a class="btn btn-sm btn-white border lift" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Row end  -->
+                                </div>
+                                <!-- tab end  -->
+                                <div class="tab-pane fade" id="Invoice-Email">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8 col-md-12">
+                                            <div class="card mb-3 notice">
+                                                <div class="card-body d-sm-flex justify-content-between">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar2.jpg" alt="">
+                                                        <div class="flex-fill ms-3 text-truncate">
+                                                            <h6 class="d-flex justify-content-between mb-0"><span>Assistant Registerer</span></h6>
+                                                        </div>
+                                                    </a>
+                                                    <div class="text-end d-none d-md-block">
+                                                        <p class="mb-1">ET LEVEL 3 SEMESTER 2 EXAMINATION RESULTS - 2019/2020</p>
+                                                        <span class="badge bg-primary">ET</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer justify-content-between d-flex align-items-center">
+                                                    <div class="d-none d-md-block">
+                                                        <strong>On:</strong>
+                                                        <span>2022-05-19/11:12</span>
+                                                    </div>
+                                                    <div class="card-hover-show">
+                                                        <a class="btn btn-sm btn-warning border lift" href="#">Download</a>
+                                                        <a class="btn btn-sm btn-white border lift" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Row end  -->
+                                </div>
+                                <!-- tab end  -->
+                                <!-- tab end  -->
+                                <div class="tab-pane fade" id="Invoice-BST">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8 col-md-12">
+                                            <div class="card mb-3 notice">
+                                                <div class="card-body d-sm-flex justify-content-between">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar2.jpg" alt="">
+                                                        <div class="flex-fill ms-3 text-truncate">
+                                                            <h6 class="d-flex justify-content-between mb-0"><span>Assistant Registerer</span></h6>
+                                                        </div>
+                                                    </a>
+                                                    <div class="text-end d-none d-md-block">
+                                                        <p class="mb-1">BST LEVEL 3 SEMESTER 2 EXAMINATION RESULTS - 2019/2020</p>
+                                                        <span class="badge bg-success">BST</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer justify-content-between d-flex align-items-center">
+                                                    <div class="d-none d-md-block">
+                                                        <strong>On:</strong>
+                                                        <span>2022-05-19/11:12</span>
+                                                    </div>
+                                                    <div class="card-hover-show">
+                                                        <a class="btn btn-sm btn-warning border lift" href="#">Download</a>
+                                                        <a class="btn btn-sm btn-white border lift" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Row end  -->
+                                </div>
+                                <!-- tab end  -->
+                                <!-- tab end  -->
+                                <div class="tab-pane fade" id="Invoice-other">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8 col-md-12">
+                                            <div class="alert alert-warning alert-dismissible fade show notice" role="alert">
+                                                No Notices....!
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Row end  -->
+                                </div>
+                                <!-- tab end  -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Row end  -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="assets/bundles/libscripts.bundle.js"></script>
+
+    <!-- Plugin Js-->
+    <script src="assets/bundles/dataTables.bundle.js"></script>
+
+    <!-- Jquery Page Js -->
+    <script src="../js/template.js"></script>
+    <script>
+        $(".notice").on("animationend webkitAnimationEnd", function() {
+            $(this).addClass("done");
+            if (!$(".notice:not(.done)").length) {
+                $(".notice.done").removeClass("anim").removeClass("done");
+            }
+        });
+
+        $(document).ready(function() {
+            $(".notice").addClass("anim");
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
